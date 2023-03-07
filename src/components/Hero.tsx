@@ -1,7 +1,12 @@
 import { Typography, Button } from '@material-tailwind/react';
 import { MdOutlineCloudUpload } from 'react-icons/md';
+import { useState } from 'react';
+import Modal from './Modal';
 
 const Hero = () => {
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(!open);
+
   return (
     <section id='home' className='flex h-screen items-center justify-center'>
       <div className='flex flex-col items-center justify-center'>
@@ -19,12 +24,13 @@ const Hero = () => {
           <Button
             className='mx-auto mt-3 flex items-center gap-2 bg-blue-700'
             size='sm'
-            s
+            onClick={handleOpen}
           >
-            <MdOutlineCloudUpload className='h-5 w-5' /> Upload Image
+            Get Started
           </Button>
         </div>
       </div>
+      <Modal open={open} handleOpen={handleOpen} />
     </section>
   );
 };
