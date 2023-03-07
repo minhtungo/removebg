@@ -1,5 +1,6 @@
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
+import Hero from '@/components/Hero';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
@@ -14,7 +15,9 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Header />
-      <main className='min-h-screen'></main>
+      <main className='mx-auto max-w-6xl overflow-hidden'>
+        <Hero />
+      </main>
       <Footer />
     </>
   );
