@@ -19,7 +19,7 @@ const Header = () => {
         !top && 'bg-gray-800/20 shadow-lg backdrop-blur-sm'
       }`}
     >
-      <div className='mx-auto flex h-16 max-w-6xl items-center justify-between border-b border-gray-500/20 px-4 md:h-20'>
+      <div className='mx-auto flex h-16 max-w-6xl items-center justify-between border-b border-gray-500/20 px-4 sm:px-6 '>
         <div className='flex cursor-pointer select-none items-center justify-center'>
           <FcEditImage className='h-6 w-6 sm:h-8 sm:w-8' />
           <span className='ml-2 text-lg font-bold sm:text-xl'>removebg</span>
